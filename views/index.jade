@@ -1,0 +1,20 @@
+extends layout
+
+block content
+  h1= title
+  p Welcome to #{title}
+
+  form(action="/upload", method="POST", enctype="multipart/form-data")
+    div.border
+       p
+         input(type="text", name="name")
+       p
+         input(type="file", name="image")
+
+    div.border
+       p
+         input(type="text", name="name2")
+       p
+         input(type="file", name="image2")
+    p
+      input(type='submit')  
